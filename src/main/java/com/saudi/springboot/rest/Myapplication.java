@@ -1,4 +1,4 @@
-package com.ducat.springboot.rest;
+package com.saudi.springboot.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,4 +9,7 @@ public class Myapplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Myapplication.class, args);
 	}
+	
+	
 }
+

@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.springboot.crud</groupId>
-	<artifactId>Springbootcrudoperation</artifactId>
+	<groupId>com.saudi.test</groupId>
+	<artifactId>SaudiProject</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Springbootcrudoperation Maven Webapp</name>
@@ -32,8 +32,13 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		  <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+      
 	</dependencies>
 	<build>
-		<finalName>Springbootcrudoperation</finalName>
+		<finalName>SaudiProject</finalName>
 	</build>
 </project>
