@@ -1,0 +1,58 @@
+
+CREATE TABLE
+
+CREATE TABLE `user` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `gender` VARCHAR(100) NOT NULL,
+  `status` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+CREATE TABLE
+
+CREATE TABLE `post` (
+  `id` INT NOT NULL,
+  `user_id` INT DEFAULT NULL,
+  `title` VARCHAR(200) DEFAULT NULL,
+  `body` TEXT,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `comment` (
+  `id` INT NOT NULL,
+  `post_id` INT DEFAULT NULL,
+  `name` VARCHAR(100) DEFAULT NULL,
+  `email` VARCHAR(100) DEFAULT NULL,
+  `body` TEXT,
+  PRIMARY KEY (`id`),
+  KEY `post_id` (`post_id`),
+  CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Note : 
+
+In project application.properties file ,
+ provide your user name and password for DB and Authorization also.
+ Also, mention your DB name and create the above tables and insert the data
+
+URL : 
+
+http://localhost:8080/test/posts
+
+http://localhost:8080/test/users 
+
+http://localhost:8080/test/comments
+
+
+Import the project in eclipse after creating DF tables and populating the data.
+
+Change the authorization details for the data base in the application.properties file 
+
+once the project is ready , run the application and access the above end points from the browser or postman
